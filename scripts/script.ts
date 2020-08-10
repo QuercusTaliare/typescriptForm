@@ -22,47 +22,38 @@ const formValues: object = {};
 
 // FUNCTIONS
 
-
+// UPDATE PROGRESS function
 function updateProgress() {
 
-  // const stuff = Object.values(formValues);
+  let width: number = 0;
 
-  // inputs.forEach(input => {
-  //   if (input !== "") {
+  let increment: number = 0;
 
-  //   }
-  // });
+  // const inputsArray: Array<HTMLInputElement> = [...inputs] as any;
+  const inputsArray: Array<HTMLInputElement> = Array.from(inputs);
 
-  let width: number;
-
-  const inputsArray = [...inputs];
-
-  const increment = 100 / inputsArray.length;
-
-  console.log(increment);
+  
 
   inputsArray.forEach(input => {
-    if (input.value !== "") {
+
+    if (input.value) {
+      increment = 100 / inputsArray.length;
       width += increment;
-      progressBar.style.width = 20 + "%";
+      console.log(width);
+      progressBar.style.width = width + "%";
 
+    } 
 
-    } else {
-      console.log("nope")
-    }
   })
 
-}
+} // Update Progress function ends
 
-// Submit the info
-// What is the type of an event?
-function submitInfo(e: any) {
+// SUBMIT INFO function
+function submitInfo(e: Event) {
   
   e.preventDefault();
 
   const elements = e.currentTarget.elements;
-
-  // const formValues = {};
 
   for (let i = 0; i < elements.length; i++) {
     const key = elements[i].name;
@@ -73,7 +64,7 @@ function submitInfo(e: any) {
 
   }
 
-}
+} // Submit Info function ends
 
 // EVENT LISTENERS
 
