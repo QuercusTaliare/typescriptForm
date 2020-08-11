@@ -31,6 +31,13 @@ function updateProgress() {
             progressBar.style.width = 0 + "%";
         }
     });
+    // Submit Button error handling
+    if (progressBar.style.width === "100%" && password.value === passwordRepeat.value) {
+        button.classList.add('active');
+    }
+    else {
+        button.classList.remove('active');
+    }
 } // Update Progress function ends
 // SUBMIT INFO function
 function submitInfo(e) {

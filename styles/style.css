@@ -8,4 +8,17 @@
   height: 30px;
   background: cornflowerblue;
   width: 0%;
+  transition: width 1s ease-in;
+}
+
+.button {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+.button.active {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
 }
