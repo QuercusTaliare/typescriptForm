@@ -13,15 +13,22 @@ var formValues = {};
 // UPDATE PROGRESS function
 function updateProgress() {
     var width = 0;
-    var increment = 0;
     // const inputsArray: Array<HTMLInputElement> = [...inputs] as any;
     var inputsArray = Array.from(inputs);
+    var increment = 100 / inputsArray.length;
+    var counter = 0;
     inputsArray.forEach(function (input) {
         if (input.value) {
-            increment = 100 / inputsArray.length;
             width += increment;
-            console.log(width);
+            console.log(input.value, width);
             progressBar.style.width = width + "%";
+        }
+        else if (!input.value) {
+            counter++;
+        }
+        // When the number of empty inputs equals amount of inputs, width is equal to zero
+        if (counter === inputsArray.length) {
+            progressBar.style.width = 0 + "%";
         }
     });
 } // Update Progress function ends
@@ -37,6 +44,8 @@ function submitInfo(e) {
         }
     }
 } // Submit Info function ends
+// Update Progress function runs on page load
+updateProgress();
 // EVENT LISTENERS
 form.addEventListener('submit', submitInfo);
 inputs.forEach(function (input) { return input.addEventListener('focusout', updateProgress); });

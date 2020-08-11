@@ -27,22 +27,29 @@ function updateProgress() {
 
   let width: number = 0;
 
-  let increment: number = 0;
-
   // const inputsArray: Array<HTMLInputElement> = [...inputs] as any;
   const inputsArray: Array<HTMLInputElement> = Array.from(inputs);
 
-  
+  const increment: number = 100 / inputsArray.length;
+
+  let counter: number = 0;
 
   inputsArray.forEach(input => {
 
     if (input.value) {
-      increment = 100 / inputsArray.length;
+      
       width += increment;
-      console.log(width);
+      console.log(input.value, width);
       progressBar.style.width = width + "%";
 
-    } 
+    } else if (!input.value) {
+      counter++;
+    }
+
+    // When the number of empty inputs equals amount of inputs, width is equal to zero
+    if (counter === inputsArray.length) {
+      progressBar.style.width = 0 + "%";
+    }
 
   })
 
@@ -65,6 +72,9 @@ function submitInfo(e: Event) {
   }
 
 } // Submit Info function ends
+
+// Update Progress function runs on page load
+updateProgress();
 
 // EVENT LISTENERS
 
