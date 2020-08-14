@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -12,81 +14,84 @@
     <h1>Making Progress</h1>
   </header>
 
-  <main>
+  <div class="wrapper">
+    
+    <main>
 
-    <div class="progressContainer">
-      <div class="progressBar"></div>
-    </div>
 
-    <form class="form">
-
-      <!-- FIRST NAME  -->
-      <label for="firstName">
-        <span>First Name</span>
-        <input 
-          type="text" 
-          id="firstName" 
-          name="firstName" 
-          class="firstName inputs" 
-          value="Bill"
-        >
-      </label>
+      <div class="progressContainer">
+        <div class="progressBar"></div>
+      </div>
       
-      <!-- LAST NAME  -->
-      <label for="lastName">
-        <span>Last Name</span>
-        <input 
+      <form class="form">
+        
+        <!-- FIRST NAME  -->
+        <label for="firstName">
+          <span>First Name</span>
+          <input 
+            type="text" 
+            id="firstName" 
+            name="firstName" 
+            class="firstName inputs" 
+            value="Bill"
+          >
+        </label>
+        
+        <!-- LAST NAME  -->
+        <label for="lastName">
+          <span>Last Name</span>
+          <input 
           type="text" 
           id="lastName" 
           name="lastName" 
           class="lastName inputs" 
-          value="Baxby"
-        >
-      </label>
-
-      <!-- EMAIL  -->
-      <label for="email">
-        <span>Email</span>
-        <input 
+          
+          >
+        </label>
+        
+        <!-- EMAIL  -->
+        <label for="email">
+          <span>Email</span>
+          <input 
           type="email" 
           id="email" 
           name="email" 
           class="email inputs" 
-          value="Bill@baxbyenterprises.com"
-        >
-      </label>
-
-      <!-- PASSWORD  -->
-      <label for="password">
-        <span>Password</span>
-        <input 
+          
+          >
+        </label>
+        
+        <!-- PASSWORD  -->
+        <label for="password">
+          <span>Password</span>
+          <input 
           type="password" 
           id="password" 
           name="password" 
           class="password inputs" 
-          value="billiam"
-        >
-      </label>
-
-      <!-- PASSWORD REPEATED  -->
-      <label for="passwordRepeat">
-        <span>Enter Password Again</span>
-        <input 
+          
+          >
+        </label>
+        
+        <!-- PASSWORD REPEATED  -->
+        <label for="passwordRepeat">
+          <span>Enter Password Again</span>
+          <input 
           type="password" 
           id="passwordRepeat" 
           name="passwordRepeat" 
           class="passwordRepeat inputs" 
-          value="billiam"
-        >
-      </label>
-
-      <button type="submit" class="button">Submit</button>
-
-    </form>
-
-
-
-  </main>
+          
+          >
+        </label>
+        
+        <button type="submit" class="button">Submit</button>
+        
+      </form>
+      
+      
+    </main>
+  </div><!--wrapper ends-->
 
   <footer>
 
