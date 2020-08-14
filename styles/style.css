@@ -61,7 +61,7 @@ a {
 
 header {
   height: 20vh;
-  background: var(--goldCrayola);
+  background: var(--lemonMeringue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,7 +119,9 @@ span {
 }
 
 input {
-  width: 30%;
+  padding: 4px;
+  border: solid 2px var(--goldCrayola);
+  border-radius: 4px;
 }
 
 
@@ -127,6 +129,12 @@ input {
 .button {
   opacity: 0.5;
   pointer-events: none;
+  background: var(--internationalOrangeAerospace);
+  border: none;
+  border-radius: 15px;
+  padding: 15px 25px;
+  font-size: 2rem;
+
 }
 
 
@@ -137,3 +145,15 @@ input {
 }
 
 /* FOOTER  */
+
+footer {
+  background: var(--lemonMeringue);
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: underline;
+}
